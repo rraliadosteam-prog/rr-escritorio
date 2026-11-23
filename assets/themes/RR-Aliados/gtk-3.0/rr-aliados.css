@@ -1,0 +1,56 @@
+/* ==== RR ALIADOS: capa de marca sobre base Yaru recoloreada ==== */
+@define-color rr_fucsia #be076d;
+@define-color rr_mostaza #ded116;
+@define-color rr_orquidea #973d8f;
+@define-color rr_negro #070001;
+@define-color rr_crema #fffff3;
+
+*:focus { outline-color: alpha(@rr_fucsia, 0.8); }
+selection, *:selected, text selection { background-color: @rr_fucsia; color: @rr_crema; }
+
+tooltip, tooltip.background { background-color: rgba(18,8,15,0.96); border: 1px solid alpha(@rr_fucsia,0.6); border-radius: 8px; color: @rr_crema; }
+tooltip * { color: @rr_crema; }
+
+menu, .menu, .context-menu, popover.menu contents {
+  background-color: #170c14; border: 1px solid #3a2232; border-radius: 10px; padding: 6px;
+}
+menu menuitem, .menu menuitem { padding: 7px 12px; border-radius: 6px; }
+menu menuitem:hover, .menu menuitem:hover { background-color: @rr_fucsia; color: @rr_crema; }
+menu menuitem:hover label, menu menuitem:hover accelerator { color: @rr_crema; }
+menu separator { background-color: #3a2232; margin: 4px 6px; }
+
+button.suggested-action { background-image: none; background-color: @rr_fucsia; color: @rr_crema; }
+button.suggested-action:hover { background-color: shade(#be076d, 1.12); }
+button.destructive-action { background-image: none; background-color: #c7162b; color: @rr_crema; }
+switch:checked, check:checked, radio:checked { background-color: @rr_fucsia; border-color: @rr_fucsia; }
+progressbar progress, scale highlight, levelbar block.filled { background-color: @rr_fucsia; border-color: @rr_fucsia; }
+scrollbar slider { background-color: alpha(@rr_crema, 0.28); border-radius: 8px; min-width: 6px; min-height: 6px; }
+scrollbar slider:hover { background-color: alpha(@rr_fucsia, 0.85); }
+notebook > header tab:checked { box-shadow: inset 0 -3px @rr_fucsia; }
+headerbar, .titlebar { background-image: none; background-color: #21131c; color: @rr_crema; border-bottom: 1px solid #120a10; }
+.sidebar, placessidebar, placessidebar.sidebar, .thunar .sidebar { background-color: #1d1018; }
+placessidebar row:selected, .sidebar row:selected { background-color: alpha(@rr_fucsia, 0.85); color: @rr_crema; }
+entry:focus { border-color: @rr_fucsia; box-shadow: inset 0 0 0 1px @rr_fucsia; }
+
+/* ---- Panel superior XFCE ---- */
+.xfce4-panel.background { background-image: none; border-bottom: 1px solid alpha(@rr_fucsia, 0.45); }
+.xfce4-panel button, .xfce4-panel .flat { border-radius: 8px; padding: 2px 6px; color: @rr_crema; }
+.xfce4-panel button:hover { background-image: none; background-color: alpha(@rr_fucsia, 0.28); box-shadow: none; }
+.xfce4-panel button:checked, .xfce4-panel button:active { background-image: none; background-color: @rr_fucsia; color: @rr_crema; box-shadow: none; }
+#whiskermenu-button { padding: 2px 10px; margin: 3px 4px; background-color: alpha(@rr_fucsia,0.18); border: 1px solid alpha(@rr_fucsia,0.55); border-radius: 9px; }
+#whiskermenu-button:hover, #whiskermenu-button:checked { background-color: @rr_fucsia; }
+#whiskermenu-button label { font-family: "Inter Tight"; font-weight: 700; color: @rr_crema; }
+
+/* ---- Menú Whisker ---- */
+#whiskermenu-window { background-color: rgba(14,6,11,0.98); border: 1px solid alpha(@rr_fucsia,0.55); }
+#whiskermenu-window * { font-family: "Lexend"; }
+#whiskermenu-window entry { background-color: #22131d; border: 1px solid #44283a; border-radius: 10px; padding: 8px 12px; color: @rr_crema; caret-color: @rr_mostaza; margin: 6px 4px; }
+#whiskermenu-window entry:focus { border-color: @rr_fucsia; box-shadow: none; }
+#whiskermenu-window treeview, #whiskermenu-window iconview, #whiskermenu-window scrolledwindow, #whiskermenu-window viewport { background-color: transparent; color: @rr_crema; }
+#whiskermenu-window treeview:hover, #whiskermenu-window iconview:hover { background-color: alpha(@rr_fucsia,0.22); border-radius: 8px; }
+#whiskermenu-window treeview:selected, #whiskermenu-window iconview:selected { background-color: @rr_fucsia; color: @rr_crema; border-radius: 8px; }
+#whiskermenu-window button { background-image: none; background-color: transparent; border: none; box-shadow: none; border-radius: 8px; padding: 6px 10px; color: @rr_crema; }
+#whiskermenu-window button:hover { background-color: alpha(@rr_fucsia,0.25); }
+#whiskermenu-window button:checked { background-color: alpha(@rr_orquidea,0.55); color: @rr_crema; box-shadow: inset 3px 0 @rr_mostaza; }
+#whiskermenu-window button label { color: @rr_crema; }
+#whiskermenu-window .title, #whiskermenu-window label.title { font-family: "Inter Tight"; font-weight: 700; color: @rr_mostaza; }

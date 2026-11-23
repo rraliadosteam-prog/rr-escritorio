@@ -1,0 +1,12 @@
+button-title=Menú
+button-icon=@HOME@/.local/share/icons/rr/simbolo_rr_menu_256.png
+show-button-title=true
+show-button-icon=true
+menu-width=700
+menu-height=580
+launcher-show-description=true
+launcher-icon-size=3
+category-icon-size=2
+profile-shape=0
+menu-opacity=100
+position-search-alternate=false
