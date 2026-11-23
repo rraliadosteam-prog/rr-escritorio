@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfwm4" version="1.0">
+  <property name="general" type="empty">
+    <property name="theme" type="string" value="RR-Aliados"/>
+    <property name="button_layout" type="string" value="O|HMC"/>
+    <property name="title_font" type="string" value="Inter Tight Bold 10"/>
+    <property name="title_alignment" type="string" value="center"/>
+    <property name="full_width_title" type="bool" value="true"/>
+    <property name="show_app_icon" type="bool" value="false"/>
+    <property name="borderless_maximize" type="bool" value="true"/>
+    <property name="placement_mode" type="string" value="center"/>
+    <property name="use_compositing" type="bool" value="true"/>
+    <property name="show_frame_shadow" type="bool" value="true"/>
+    <property name="shadow_opacity" type="int" value="45"/>
+    <property name="shadow_delta_y" type="int" value="-4"/>
+    <property name="shadow_delta_height" type="int" value="6"/>
+  </property>
+</channel>

@@ -175,6 +175,12 @@ DESK
   # Barra superior y menú: se dejan escritos para el primer inicio de XFCE
   local X="$HOME/.config/xfce4/xfconf/xfce-perchannel-xml"; mkdir -p "$X" "$HOME/.config/xfce4/panel"
   cp -f "$RRD/xfce4-panel.xml" "$X/xfce4-panel.xml"
+  # Colores, ventanas y notificaciones quedan escritos en disco desde ya (persisten aunque se reinicie antes
+  # del primer arranque). Si ya tenías esos archivos, el primer arranque los ajusta con xfconf-query.
+  local c
+  for c in xsettings xfwm4 xfce4-notifyd; do
+    if [ ! -s "$X/$c.xml" ]; then cp -f "$A/config/$c.xml" "$X/$c.xml"; fi
+  done
   sed "s|@HOME@|$HOME|g" "$A/config/whiskermenu-4.rc" >"$HOME/.config/xfce4/panel/whiskermenu-4.rc"
   ok "Barra superior negra con menú RR"
 }

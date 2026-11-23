@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# RR ALIADOS: rota los fondos RR cada 5 minutos (solo imágenes).
+# RR ALIADOS: rota los fondos RR cada 30 segundos (solo imágenes).
 set -u
 DIR="$HOME/.local/share/rr-escritorio/fondos"
 mapfile -t imgs < <(find "$DIR" -maxdepth 1 -type f \( -iname '*.png' -o -iname '*.jpg' \) | sort)
@@ -24,5 +24,5 @@ while true; do
     xfconf-query -c xfce4-desktop -p "$p" -s "${imgs[$i]}"
   done < <(props)
   i=$(( (i + 1) % ${#imgs[@]} ))
-  sleep 300
+  sleep 30
 done

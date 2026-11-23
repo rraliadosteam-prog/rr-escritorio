@@ -81,7 +81,19 @@ for id in "$nav" firefox_firefox.desktop firefox.desktop firefox-esr.desktop goo
 done
 if command -v plank >/dev/null && ! pgrep -u "$(id -u)" -x plank >/dev/null; then (setsid plank >/dev/null 2>&1 &); fi
 
-# 6) Listo: este arranque no se vuelve a ejecutar
+# 6) Asegurar que todo quedó escrito en disco antes de dar por terminado.
+#    xfconfd guarda solo a los pocos segundos; si el PC se apaga antes, este script corre otra vez
+#    en el siguiente inicio (es seguro repetirlo) porque su autostart se borra solo al final.
+X="$HOME/.config/xfce4/xfconf/xfce-perchannel-xml"
+for _ in $(seq 1 30); do
+  grep -q 'RR-Aliados' "$X/xsettings.xml" 2>/dev/null && grep -q 'RR-Aliados' "$X/xfwm4.xml" 2>/dev/null \
+    && grep -q 'RR-Notify' "$X/xfce4-notifyd.xml" 2>/dev/null && break
+  sleep 1
+done
+grep -q 'RR-Aliados' "$X/xsettings.xml" 2>/dev/null || { echo "aún no se guardó xsettings; reintento en el próximo inicio"; exit 0; }
+sync
+
+# 7) Listo: este arranque no se vuelve a ejecutar
 command -v notify-send >/dev/null && notify-send -i "$HOME/.local/share/icons/rr/simbolo_transparent_mostaza-64.png" "RR ALIADOS" "Tu escritorio RR quedó listo 🎉"
 rm -f "$AUTO"
 echo "== listo"

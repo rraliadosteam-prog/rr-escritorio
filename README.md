@@ -1,7 +1,7 @@
 # RR Escritorio · RR ALIADOS
 
 Deja cualquier Linux (Ubuntu, Debian, Mint, Pop!_OS) con el **escritorio RR**: XFCE con los colores de RR ALIADOS,
-íconos fucsia, cursor Bibata, fondos RR que rotan cada 5 min, barra superior negra con menú RR, reloj mostaza,
+íconos fucsia, cursor Bibata, los 11 fondos RR que rotan cada 30 segundos, barra superior negra con menú RR, reloj mostaza,
 Plank abajo (se esconde solo) con el panel **Apps RR**, y ventanas que abren maximizadas.
 
 ## Instalar (una línea en la terminal)
