@@ -1,0 +1,41 @@
+#XfceNotifyWindow {
+    background-color: #120a12;
+    border: 1px solid #be076d;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+#XfceNotifyWindow label,
+#XfceNotifyWindow image {
+    color: #fffff3;
+}
+
+#XfceNotifyWindow label#summary {
+    font-family: "Inter Tight";
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+#XfceNotifyWindow label#body {
+    font-family: "Lexend";
+    font-weight: normal;
+    font-size: 11pt;
+}
+
+#XfceNotifyWindow image {
+    min-width: 32px;
+    min-height: 32px;
+    padding-right: 10px;
+}
+
+#XfceNotifyWindow button {
+    background-image: none;
+    border: none;
+    background-color: #be076d;
+    color: #fffff3;
+    font-family: "Inter Tight";
+}
+
+#XfceNotifyWindow button:hover {
+    background-color: #973d8f;
+}

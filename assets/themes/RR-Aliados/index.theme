@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=RR Aliados
+Comment=RR ALIADOS: negro, fucsia, mostaza, orquídea y crema
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=RR-Aliados
+MetacityTheme=RR-Aliados
+IconTheme=RR-Oscuro-Iconos
+CursorTheme=Bibata-Modern-Classic
+ButtonLayout=menu:minimize,maximize,close
