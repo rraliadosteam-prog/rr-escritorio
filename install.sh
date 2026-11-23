@@ -60,7 +60,7 @@ instalar_paquetes() {
         xfce4-appfinder xfce4-notifyd xfce4-pulseaudio-plugin xfce4-whiskermenu-plugin xfce4-power-manager
         xfce4-screenshooter mousepad ristretto python3 python3-gi gir1.2-gtk-3.0 gir1.2-wnck-3.0
         xdotool x11-xserver-utils dconf-cli libnotify-bin fontconfig xz-utils tar gtk2-engines-pixbuf
-        xdg-utils dbus-x11 network-manager-gnome pavucontrol)
+        xdg-utils dbus-x11 network-manager-gnome pavucontrol gtk-update-icon-cache)
       local extra=(plank papirus-icon-theme xfce4-goodies)
       local APT=(sudo DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold)
       "${APT[@]}" update -q </dev/null || aviso "apt update dio un aviso; sigo."
@@ -194,6 +194,8 @@ instalar_papirus() {
     fi
   done
   [ -f "$I/Papirus/index.theme" ] || { aviso "Papirus no quedó instalado; sigo."; return 0; }
+  # La caché copiada del sistema queda vieja: se quita y se regenera (si falta la herramienta, GTK lee las carpetas).
+  rm -f "$I/Papirus/icon-theme.cache" "$I/Papirus-Dark/icon-theme.cache"
   cp -a "$A/papirus-rr/." "$I/" 2>/dev/null || true
   rm -f "$I/enlaces.tsv"
   local ruta destino
