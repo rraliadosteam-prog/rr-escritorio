@@ -60,7 +60,7 @@ instalar_paquetes() {
         xfce4-appfinder xfce4-notifyd xfce4-pulseaudio-plugin xfce4-whiskermenu-plugin xfce4-power-manager
         xfce4-screenshooter mousepad ristretto python3 python3-gi gir1.2-gtk-3.0 gir1.2-wnck-3.0
         xdotool x11-xserver-utils dconf-cli libnotify-bin fontconfig xz-utils tar gtk2-engines-pixbuf
-        xdg-utils dbus-x11 network-manager-gnome pavucontrol gtk-update-icon-cache)
+        xdg-utils dbus-x11 network-manager-gnome pavucontrol gtk-update-icon-cache librsvg2-common)
       local extra=(plank papirus-icon-theme xfce4-goodies)
       local APT=(sudo DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold)
       "${APT[@]}" update -q </dev/null || aviso "apt update dio un aviso; sigo."
